@@ -268,7 +268,7 @@ object MatrixFactorizationModel extends Loader[MatrixFactorizationModel] {
    * @return an RDD of (srcId: Int, recommendations), where recommendations are stored as an array
    *         of (dstId, rating) pairs.
    */
-  private def recommendForAll(
+  def recommendForAll(
       rank: Int,
       srcFeatures: RDD[(Int, Array[Double])],
       dstFeatures: RDD[(Int, Array[Double])],
